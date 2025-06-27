@@ -1,0 +1,17 @@
+openapi: 3.0.0
+info:
+  title: Transaction Broker API
+  version: 1.0.0
+paths:
+  /v1/transactions:
+    get:
+      summary: Get all transactions
+      parameters:
+        - in: header
+          name: x-api-key
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A list of transactions
